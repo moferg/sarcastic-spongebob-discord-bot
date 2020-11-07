@@ -5,16 +5,14 @@
 import os
 import discord
 from dotenv import load_dotenv
-from discord.ext import commands
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
 
-bot = commands.Bot(command_prefix='!')
+client = discord.Client()
 
-@bot.event
+@client.event
 async def on_ready():
-    print(f'{bot.user.name} has connected to Discord!')
+    print(f'{client.user} has connected to Discord!')
 
-bot.run(TOKEN)
+client.run(TOKEN)
