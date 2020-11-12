@@ -16,11 +16,8 @@ bot = commands.Bot(command_prefix='!')
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
-@bot.command(help="i MaKe FuN oF pEoPlE sO yOu dOn'T hAvE tO. tYpE '!sarcasm' fOlLoWeD bY tHe TeXt To MiMiC")
+@bot.command(help="tYpE '!sarcasm' fOlLoWeD bY tHe TeXt To MiMiC")
 async def sarcasm(ctx, *, message):
-    # message = await ctx.fetch_message(ctx.channel.last_message_id)
-    # if message.author == bot.user:
-    #     return
 
     sarcatic_message = ''
     condition = True
